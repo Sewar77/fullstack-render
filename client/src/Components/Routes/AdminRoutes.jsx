@@ -4,10 +4,8 @@ import { Navigate } from "react-router-dom";
 import { LinearProgress } from "@mui/material";
 
 export default function AdminRoutes({ children }) {
-  const { currentUser, authMe, loading } = useAuth();
-  useEffect(() => {
-    authMe();
-  }, []);
+  const { currentUser, loading } = useAuth();
+
   if (loading) {
     return <LinearProgress />;
   }
