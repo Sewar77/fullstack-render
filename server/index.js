@@ -14,7 +14,7 @@ const app = express();
 app.use(cookieParser());
 app.use(
     cors({
-        origin: "https://fullstack-render-1.onrender.com/",
+        origin: "https://fullstack-render-1.onrender.com",
         credentials: true,
     }),
 );
