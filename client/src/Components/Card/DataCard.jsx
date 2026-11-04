@@ -23,9 +23,10 @@ export default function DataCard({ data = [], type }) {
   return (
     <>
       <Header />
-      {data.length === 0 && <Typography>no data</Typography>}
       <Container sx={{ my: 3 }}>
         <Typography variant="h2">{type}</Typography>
+        {data.length === 0 && <Typography>no data</Typography>}
+
         <Grid container spacing={6} sx={{ p: 2, m: 2 }}>
           {data.map((item) => {
             return (
