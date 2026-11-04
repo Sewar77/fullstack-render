@@ -6,10 +6,8 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Header() {
-  const { authMe, currentUser, logout } = useAuth();
-  useEffect(() => {
-    authMe();
-  }, []);
+  const { logout } = useAuth();
+  const currentUser = {};
   const navigate = useNavigate();
   return (
     <>
