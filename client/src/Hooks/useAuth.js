@@ -21,7 +21,7 @@ export const useAuth = () => {
                 navigate("/");
             }
         } catch (error) {
-            console.log(error);
+            console.log(error); //production/ deployemtn
 
             toast.error(error.response?.data?.message);
             return;
