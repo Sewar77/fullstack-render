@@ -49,19 +49,7 @@ export const useAuth = () => {
             return;
         }
     };
-    const authMe = async () => {
-        try {
-            const res = await api.get("/auth/me");
-            console.log(res);
 
-            setCurrentUser(res.data.user);
-            console.log(res.data.user.role);
-            setLoading(false)
-        } catch (error) {
-            setLoading(false)
-            return;
-        }
-    };
     const logout = async () => {
         try {
             const res = await api.get("/auth/logout");
@@ -73,5 +61,5 @@ export const useAuth = () => {
             return;
         }
     };
-    return { login, currentUser, authMe, register, loading, logout };
+    return { login, currentUser, register, loading, logout };
 };

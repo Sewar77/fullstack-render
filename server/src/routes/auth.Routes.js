@@ -13,7 +13,7 @@ router.post("/auth/login", validate(loginSchema), loginController)
 router.post("/auth/refresh", refreshController)
 
 // /only logout and me is get
-router.get("/auth/me", protect, me)
+// router.get("/auth/me", protect, me)
 router.get("/auth/logout", protect, logout)
 
 export default router

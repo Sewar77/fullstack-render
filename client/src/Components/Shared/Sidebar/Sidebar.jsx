@@ -14,11 +14,8 @@ import { useNavigate } from "react-router-dom";
 import ThemeToggle from "../../ThemeToggle/ThemeToggle";
 import { useThemeContext } from "../../../Hooks/useTheme";
 export default function Sidebar() {
-  const { currentUser, authMe } = useAuth();
   const navigate = useNavigate();
-  useEffect(() => {
-    authMe();
-  }, []);
+
   const { isDark } = useThemeContext();
   return (
     <>
@@ -45,7 +42,7 @@ export default function Sidebar() {
         >
           <ListItemButton>Dashboard</ListItemButton>
 
-          {currentUser.role === "admin" && (
+          {"Admin" === "admin" && (
             <>
               <ListItemButton onClick={() => navigate("/admin/users")}>
                 Users
