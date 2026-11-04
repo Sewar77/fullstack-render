@@ -29,19 +29,12 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/unautherized" element={<Unautherized />} />
+        {/* <Route path="/unautherized" element={<Unautherized />} /> */}
         <Route path="/category/:name/:id/products" element={<ProductsItem />} />
         <Route path="/view-product/:name/:id" element={<ViewProduct />} />
 
         {/* admin routes */}
-        <Route
-          path="/admin"
-          element={
-            <AdminRoutes>
-              <AdminLayout />
-            </AdminRoutes>
-          }
-        >
+        <Route path="/admin" element={<AdminLayout />}>
           <Route index path="dashboard" element={<AdminDashboard />} />
           <Route path="users" element={<ManageUsers />} />
           <Route path="categories" element={<ManageCategories />} />
