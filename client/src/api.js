@@ -1,6 +1,6 @@
 import axios from "axios"
 export const api = axios.create({
-    baseURL: process.env.BACKEND_URL || "http://localhost:3000/api",
+    baseURL: "https://fullstack-render-z51l.onrender.com/api",
     withCredentials: true,
     headers: {
         "Content-Type": "application/json",
@@ -20,7 +20,7 @@ api.interceptors.response.use(
                 // The browser automatically sends the HTTP-only refreshToken cookie.
                 // The backend will respond by setting a new accessToken cookie.
                 await axios.post(
-                    `${process.env.BACKEND_URL || "http://localhost:3000/api"}/auth/refresh`,
+                    `https://fullstack-render-z51l.onrender.com/api/auth/refresh`,
                     {},
                     { withCredentials: true }
                 );
